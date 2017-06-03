@@ -1,5 +1,6 @@
 body {
   padding: 0px;
+  font-size: 16px;
 }
 
 main#bg::before {
@@ -15,39 +16,138 @@ main#bg::before {
   top: 0;
   left: 0;
   right: 0;
-  /*border-bottom: 1px rgba(255, 255, 255, 0.1);*/
-  border-bottom: 1px #d6e1f9
+  border-bottom: 1px #d6e1f9;
   z-index: 5;
 }
 
 #main-panel {
   background-color: #104da1;
-  display: inline-block;
   height: 250px;
   width: 100%;
   margin-top: 67px;
   padding: 10px;
+  z-index: 2;
 }
 
 #inner-panel {
-  margin: 20px auto 20px auto;
-  /*margin-top: 100px;*/
-  padding: inherit;
-  width: 70%;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  left: 0px;
+  right: 0px;
+  width: 77%;
   height: 442px;
   background-color: #ffffff;
   border-width: 2px;
   border-color: #2f7eb1;
   border-radius: 3px;
-  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 3;
+}
+
+.summary-row {
+  background-color: lightblue;
+}
+
+#match-details {
+  /*background-color: pink;*/
+  margin-top: 18px;
+  margin-bottom: 18px;
+  height: 54px;
+  float: left;
+  width: 50%;
+  font-size: 110%;
+  line-height: 60px;
+}
+
+span#match-pct {
+  font-weight: bold;
+}
+
+#action-boxes {
+  background-color: green;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  height: 54px;
+  float: right;
+  width: 40%;
+}
+
+#pics-row {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 290px;
+  min-width: 1000px;
+  display: block;
+}
+
+#pics-row img {
+  height: 286px;
+  width: 286px;
+  margin: 0px 10px 0px 0px;
+  display: inline;
+  border-radius: 3px;
+}
+
+.inner-footer-row {
+  background-color: lightblue;
+  font-size: 110%;
+  height: 90px;
+  line-height: 60px;
+}
+
+#promote-a-list {
+  background-color: pink;
+  float: left;
+  width: 70%;
+}
+
+#carousel-controls {
+  background-color: green;
+  float: right;
+  width: 20%;
 }
 
 #profile-content {
   margin: 0 auto;
-  padding: 100px;
+  padding: 350px 250px 60px 250px;
   width: 100%;
-  min-height: 500px;
+  min-height: 800px;
   background-color: rgb(243, 245, 249);
+  overflow: auto;
+  z-index: 2;
+}
+
+#profile-questions {
+  min-height: 200px;
+}
+
+#blurb {
+  height: 170px;
+  width: 320px;
+  padding: 20px;
+  margin-left: 20px;
+  background-color: #ffffff;
+  float: right;
+  font-size: 17px;
+  line-height: 24px;
+  font-family: "GT America", Helvetica, sans-serif;
+}
+
+#looking {
+  line-height: 32px;
+}
+
+span.question, p.response {
+  font-size: 17px;
+  line-height: 24px;
+  font-family: "GT America", Helvetica, sans-serif;
+}
+
+span.question {
+    font-weight: bold;
 }
 
 #footer-panel {
@@ -87,6 +187,7 @@ main#bg::before {
 
 ul.nav-left-links {
   font-size: 15px;
+  font-family: "GT America", Helvetica, sans-serif;
   line-height: 22px;
   float: left;
   height: 65px;
@@ -97,6 +198,7 @@ ul.nav-left-links {
 
 ul.nav-right-links {
   font-size: 15px;
+  font-family: "GT America", Helvetica, sans-serif;
   line-height: 22px;
   height: 65px;
   margin: 0;
@@ -151,20 +253,23 @@ span.nav-link-text, span.okc-glyph {
   margin: 10px auto 10px auto;
   background-color: #a3149d;
   height: 60px;
-  width: 84%;
+  /*width: 77% * 1.2;*/
+  width: 92.4%;
 }
 
 .roster-row > * {
-  display: inline;
+  display: inline-block;
 }
 
 .roster-queue {
+  width: 80%;
   margin: 0 auto;
   background-color: #14a32b;
 }
 
 .roster-queue > span.roster {
   display: inline;
+
 }
 
 
@@ -174,14 +279,16 @@ span.roster {
 
 .roster-pic {
   display: inline;
+  width: 10%;
+  border-right: 1px rgb(255, 0, 0);
 }
 
-.roster-undo {
-
+#roster-undo {
+  width: 10%;
 }
 
-.roster-previous {
-
+#roster-previous {
+  width: 10%;
 }
 
 span.undo-button {
@@ -192,7 +299,17 @@ span.previous-button {
 
 }
 
+ul.footer-links li a {
+  font-size: 17px;
+  line-height: 30px;
+  text-decoration: none;
+  margin-right: 10px;
+  color: rgb(94, 137, 222);
+}
 
+ul.footer-links li a:hover {
+  color: #d6e1f9;
+}
 
 
 
@@ -229,9 +346,14 @@ ul.social-links, ul.footer-links {
 }
 
 p#copyright {
-  color: #d6e1f9;
+  color: rgb(94, 137, 222);
   font-size: 17px;
 }
+
+p#copyright span:hover {
+  color: #d6e1f9;
+}
+
 /*ul.footer-links {
   line-height: 61px;
   font-weight: 100;

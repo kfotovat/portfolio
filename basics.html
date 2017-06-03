@@ -58,11 +58,10 @@
 
         <div id="main-panel">
           <div class="roster-row">
-            <p>roster row<br></p>
-            <div class="roster-undo">
+            <div id="roster-undo">
               <a href="#"><span class="undo-button">undo</span></a>
             </div>
-            <div class="roster-previous">
+            <div id="roster-previous">
               <a href="#"><span class="previous-button">previous</span></a>
             </div>
             <div class="roster-queue">
@@ -76,15 +75,79 @@
             </div>
           </div>
           <div id="inner-panel">
-            <p>inner panel</p>
+            <div class="summary-row">
+              <div id="match-details">
+                <span id="match-pct">86% Match</span> &bull;
+                <span id="age">31</span> &bull;
+                <span id="location">San Francisco, CA</span>
+              </div>
+              <div id="action-boxes">
+                <img id="match-action-reject">
+                <img id="match-action-accept">
+              </div>
+            </div>
+            <div id="pics-row">
+              <img class="current-pic">
+              <img class="current-pic">
+              <img class="current-pic">
+              <img class="current-pic">
+            </div>
+            <div class="inner-footer-row">
+              <div id="promote-a-list">
+                <span id="match-count">64</span> people like you!
+                <a href="#">See them all with A-List <span id="bracket">><span></a>
+              </div>
+              <div id="carousel-controls">float right</div>
+            </div>
           </div>
         </div>
         <div id="profile-content">
-          <p>profile content</p>
+          <div id="blurb">
+            <strong id="looking">You're currently looking for...</strong><br>
+            <p>Lane drivers, defenders, rim protection, near me, ages 19‑36, for long-term NBA domination &amp; dynasty. Also looking for new friends.</p>
+          </div>
+          <div id="profile-questions">
+            <br><span class="question">What I’m doing with my life</span><br><br>
+              <p class="response">
+                learning + lolling
+              </p>
+              <p class="response">
+                working for the corner of the internet that I respect & adore more than any other
+              </p>
+            <br><span class="question">I’m really good at</span><br><br>
+              <p class="response">
+                - figuring stuff out (puzzles, mysteries)
+                <br>- getting at the essence of stuff (people, song lyrics, etc)
+                <br>- driving!
+              </p>
+            <br><span class="question">Favorite books, movies, shows, music, and food</span><br><br>
+              <p class="response">
+                my favorite authors are Dostoyevsky and Dorothy West. I've been trying to get into contemporary authors recently but can't say I ride for any living novelist. Love a ton of Internet writers, though!
+              </p>
+              <p class="response">
+                Breaking! Bad! and Better Call Saul (and the companion podcasts!!!). Veronica Mars, Friday Night Lights. Broad City. Silicon Valley. All of those prestige shows. Golden age of television, what a time to be alive.
+              </p>
+              <p class="response">
+                Beach Boys, Kanye, The Strokes, Lana Del Rey, Run the Jewels, The Libertines, Michael Jackson, Pearl Jam
+              </p>
+            <br><span class="question">I spend a lot of time thinking about</span><br><br>
+              <p class="response">
+                everything!!
+              </p>
+              <p class="response">
+                - the Dunning-Kruger effect
+                <br>- infobesity
+              </p>
+            <br><span class="question">You should message me if</span><br><br>
+              <p class="response">
+                - you approach meeting people with curiosity and lightheartedness
+                <br>- you're one of the wittiest people you know
+              </p>
+          </div>
+
         </div>
 
         <div id="footer-panel">
-          <p>footer panel</p>
           <ul class="social-links">
             <li><a href="#">Icon</a></li>
             <li><a href="#">Icon</a></li>
@@ -102,7 +165,7 @@
             <li><a href="#">Terms and Conditions</a></li>
             <li><a href="#">Dating Safety Tips</a></li>
           <ul>
-          <p id="copyright">&copy; OkCupid 2017</p>
+          <p id="copyright"><span>&copy; OkCupid 2017</span></p>
         </div>
       </main>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
