@@ -67,7 +67,7 @@ span#match-pct {
 }
 
 #action-boxes {
-  background-color: green;
+  background-color: lightgreen;
   margin-top: 18px;
   margin-bottom: 18px;
   height: 54px;
@@ -78,13 +78,13 @@ span#match-pct {
 #pics-row {
   overflow-x: hidden;
   overflow-y: hidden;
-  height: 290px;
-  min-width: 1000px;
+  height: 262px;
+  min-width: 10000px;
   display: block;
 }
 
 #pics-row img {
-  height: 286px;
+  height: 262px;
   width: 286px;
   margin: 0px 10px 0px 0px;
   display: inline;
@@ -93,19 +93,21 @@ span#match-pct {
 
 .inner-footer-row {
   background-color: lightblue;
-  font-size: 110%;
-  height: 90px;
-  line-height: 60px;
+  line-height: 90px;
 }
 
 #promote-a-list {
-  background-color: pink;
+  /*background-color: pink;*/
+  font-size: 110%;
+  height: 90px;
   float: left;
   width: 70%;
 }
 
 #carousel-controls {
-  background-color: green;
+  background-color: lightgreen;
+  font-size: 110%;
+  height: 90px;
   float: right;
   width: 20%;
 }
@@ -251,23 +253,34 @@ span.nav-link-text, span.okc-glyph {
 
 .roster-row {
   margin: 10px auto 10px auto;
-  background-color: #a3149d;
   height: 60px;
   /*width: 77% * 1.2;*/
   width: 92.4%;
 }
 
 .roster-row > * {
-  display: inline-block;
+  display: inline;
+  float: left;
 }
 
 .roster-queue {
-  width: 80%;
-  margin: 0 auto;
-  background-color: #14a32b;
+  width: 83.33%;
+  height: 60px;
+  /*margin: 0 auto;*/
+  position: relative;
 }
 
-.roster-queue > span.roster {
+#roster-undo {
+  width: 8.33%;
+  height: 60px;
+}
+
+#roster-previous {
+  width: 8.33%;
+  height: 60px;
+}
+
+/*.roster-queue > span.roster {
   display: inline;
 
 }
@@ -275,21 +288,16 @@ span.nav-link-text, span.okc-glyph {
 
 span.roster {
 
-}
+}*/
 
 .roster-pic {
   display: inline;
+  float: left;
+  height: 60px;
   width: 10%;
   border-right: 1px rgb(255, 0, 0);
 }
 
-#roster-undo {
-  width: 10%;
-}
-
-#roster-previous {
-  width: 10%;
-}
 
 span.undo-button {
 

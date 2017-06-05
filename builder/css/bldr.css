@@ -1,0 +1,97 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+  background-color: darkblue;
+}
+
+
+.circle {
+  height: 250px;
+  width: 250px;
+  margin: 20px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 125px;
+  display: table-cell;
+  float: left;
+}
+
+.circle > .front {
+  height: 250px;
+  width: 250px;
+  /*line-height: 250px;*/
+  text-align: center;
+  border-radius: 125px;
+  background-color: orange;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 1s ease-in-out 0s;
+  /*display: none;*/
+}
+
+.circle > .back {
+  height: 250px;
+  width: 250px;
+  line-height: 250px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 125px;
+  background-color: lightblue;
+  position: absolute;
+  /*display: table-cell;*/
+  backface-visibility: hidden;
+  transform: perspective(1000px) rotateY(180deg);
+  transition: transform 1s ease-in-out 0s;
+}
+
+.circle.clicked > .front {
+  transform: perspective(1000px) rotateY(-180deg);
+}
+
+.circle.clicked > .back {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+input {
+  outline: 0;
+  line-height: 3em;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: lightblue;
+  border-width: 0 0 2px 0;
+  border-color: grey;
+}
+
+input:focus {
+  border-color: darkblue;
+}
+
+/*.circle:hover {
+  background-color: red;
+}*/
+
+/*.circle.clicked {
+  animation: enlarge-circles 2s ease-in 0s;
+}*/
+
+
+@keyframes flip {
+  from {
+    rotateX(0)
+  }
+  to {
+    rotateX(180)
+  }
+}
+
+@keyframes enlarge-circles {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
